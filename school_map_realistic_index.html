@@ -1,6 +1,5 @@
 
-<!-- saved from url=(0061)file:///C:/Users/admin/Downloads/school_map_realistic_v4.html -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>
+<style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 .phone-wrap {
   display: flex; justify-content: center;
@@ -134,7 +133,7 @@
 .msg-unread { width:8px; height:8px; border-radius:50%; background:#5BB8E8; margin-top:4px; }
 </style>
 
-</head><body><h2 class="sr-only">School Mapアプリ — リアル廊下視点マップ・時間割・メッセージ</h2>
+<h2 class="sr-only">School Mapアプリ — リアル廊下視点マップ・時間割・メッセージ</h2>
 
 <div class="phone-wrap">
  <div class="phone">
@@ -157,7 +156,7 @@
       <span id="floorTxt">3F</span>
      </div>
      <div class="time-badge">13:20</div>
-     <div class="hint-badge" id="hintBadge" style="display: flex;">
+     <div class="hint-badge" id="hintBadge">
       <i class="ti ti-corner-up-right" style="font-size:14px;" aria-hidden="true"></i>
       <span id="hintTxt">右折 10m先</span>
      </div>
@@ -167,8 +166,8 @@
     </div>
     <div class="route-steps">
      <div class="route-title"><i class="ti ti-route" style="font-size:14px;" aria-hidden="true"></i>経路ステップ</div>
-     <div class="step-row"><div class="step-dot now" id="sd0">1</div><div class="step-label">3号館 3Fを進む</div><div class="step-dist">出発</div></div>
-     <div class="step-row"><div class="step-dot todo" id="sd1">2</div><div class="step-label">突き当たりを右折</div><div class="step-dist">10m先</div></div>
+     <div class="step-row"><div class="step-dot done" id="sd0">✓</div><div class="step-label">3号館 3Fを進む</div><div class="step-dist">出発</div></div>
+     <div class="step-row"><div class="step-dot now"  id="sd1">2</div><div class="step-label">突き当たりを右折</div><div class="step-dist">10m先</div></div>
      <div class="step-row"><div class="step-dot todo" id="sd2">3</div><div class="step-label">階段を下りて2Fへ</div><div class="step-dist">20m先</div></div>
      <div class="step-row"><div class="step-dot todo" id="sd3">4</div><div class="step-label">CR.22に到着</div><div class="step-dist">35m先</div></div>
     </div>
@@ -203,18 +202,18 @@
    <!-- MESSAGE -->
    <div class="screen" id="screen-msg">
     <div class="msg-tabs">
-     <button class="msg-tab active" id="tab-send" onclick="switchMsgTab(&#39;send&#39;)">送信</button>
-     <button class="msg-tab" id="tab-recv" onclick="switchMsgTab(&#39;recv&#39;)">受信</button>
+     <button class="msg-tab active" id="tab-send" onclick="switchMsgTab('send')">送信</button>
+     <button class="msg-tab" id="tab-recv" onclick="switchMsgTab('recv')">受信</button>
     </div>
     <div id="panel-send">
      <div class="msg-compose">
       <div class="msg-compose-title"><i class="ti ti-send" style="font-size:14px;vertical-align:-2px;" aria-hidden="true"></i> メッセージを送信</div>
       <div class="msg-target-row">
-       <div class="msg-check checked" id="chk-friend" onclick="toggleCheck(&#39;chk-friend&#39;)"></div>
+       <div class="msg-check checked" id="chk-friend" onclick="toggleCheck('chk-friend')"></div>
        <i class="ti ti-users" style="font-size:16px;color:#5BB8E8;" aria-hidden="true"></i><span>友達に送信</span>
       </div>
       <div class="msg-target-row">
-       <div class="msg-check" id="chk-teacher" onclick="toggleCheck(&#39;chk-teacher&#39;)"></div>
+       <div class="msg-check" id="chk-teacher" onclick="toggleCheck('chk-teacher')"></div>
        <i class="ti ti-school" style="font-size:16px;color:#5BB8E8;" aria-hidden="true"></i><span>先生に送信</span>
       </div>
       <textarea class="msg-textarea" placeholder="コメントを追加..."></textarea>
@@ -242,9 +241,9 @@
 
   </div>
   <nav class="nav">
-   <button class="nav-btn active" id="nav-map" onclick="switchScreen(&#39;map&#39;)"><i class="ti ti-map" aria-hidden="true"></i><span>マップ</span></button>
-   <button class="nav-btn" id="nav-tt" onclick="switchScreen(&#39;tt&#39;)"><i class="ti ti-clock" aria-hidden="true"></i><span>時間割</span></button>
-   <button class="nav-btn" id="nav-msg" onclick="switchScreen(&#39;msg&#39;)"><i class="ti ti-message-circle" aria-hidden="true"></i><span>メッセージ</span></button>
+   <button class="nav-btn active" id="nav-map" onclick="switchScreen('map')"><i class="ti ti-map" aria-hidden="true"></i><span>マップ</span></button>
+   <button class="nav-btn" id="nav-tt" onclick="switchScreen('tt')"><i class="ti ti-clock" aria-hidden="true"></i><span>時間割</span></button>
+   <button class="nav-btn" id="nav-msg" onclick="switchScreen('msg')"><i class="ti ti-message-circle" aria-hidden="true"></i><span>メッセージ</span></button>
   </nav>
  </div>
 </div>
@@ -715,4 +714,3 @@ function stepFwd(){
   if(scene<3){scene++;tick=0;updateUI();}
 }
 </script>
-</body></html>
